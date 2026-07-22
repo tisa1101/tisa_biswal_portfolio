@@ -2,12 +2,23 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+	const [currentPhrase, setCurrentPhrase] = useState(0);
+	const phrases = ["AI-driven healthcare", "autonomous systems", "MedTech innovation"];
+
+	useEffect(() => {
+		const interval = window.setInterval(() => {
+			setCurrentPhrase((prev) => (prev + 1) % phrases.length);
+		}, 2200);
+
+		return () => window.clearInterval(interval);
+	}, [phrases.length]);
+
 	return (
-		<section className="relative w-full h-screen mx-auto overflow-hidden aurora-bg">
+		<section id="hero" className="relative w-full h-screen mx-auto overflow-hidden aurora-bg">
 			<div className="absolute inset-0 animated-grid z-0" />
 			
 			<div className="paddingX absolute inset-0 max-w-7xl mx-auto flex flex-col justify-center z-10 pt-32 md:pt-20">
@@ -29,24 +40,36 @@ const Hero = () => {
 						</h1>
 						
 						<p className="heroSubText text-white/80 leading-[1.6]">
-							Engineering the next generation of <span className="text-white font-bold underline decoration-[#00cea8] decoration-2 underline-offset-8">AI-driven healthcare</span> through autonomous systems and MedTech innovation.
+							Engineering the next generation of{" "}
+							<motion.span
+								key={phrases[currentPhrase]}
+								initial={{ opacity: 0, y: 8 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.35 }}
+								className="text-white font-bold underline decoration-[#00cea8] decoration-2 underline-offset-8"
+							>
+								{phrases[currentPhrase]}
+							</motion.span>
+							{" "}through autonomous systems and MedTech innovation.
 						</p>
 
 						<div className="mt-4 flex flex-wrap gap-4 justify-center lg:justify-start">
-							<motion.button
+							<motion.a
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
+								href="#work"
 								className="bg-gradient-to-r from-[#915eff] to-[#00cea8] px-8 py-4 rounded-2xl font-bold text-white premium-button-glow flex items-center gap-2"
 							>
 								Explore My Work <span>→</span>
-							</motion.button>
-							<motion.button
+							</motion.a>
+							<motion.a
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
+								href="#achievements"
 								className="px-8 py-4 rounded-2xl font-bold text-white border border-white/10 glass-morphism transition-all flex items-center gap-2"
 							>
 								View Projects 💼
-							</motion.button>
+							</motion.a>
 						</div>
 
 						<div className="mt-8 flex flex-col items-center lg:items-start gap-4">

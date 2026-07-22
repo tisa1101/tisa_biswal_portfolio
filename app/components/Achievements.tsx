@@ -100,10 +100,10 @@ const Achievements = () => {
 				className="mt-20 p-10 rounded-3xl bg-gradient-to-r from-[#151030] to-[#0c0c1d] border border-[#915eff]/20 text-center relative overflow-hidden"
 			>
 				<div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#915eff] to-transparent" />
-				<h3 className="text-white text-3xl font-bold mb-4">The "Never Give Up" Attitude</h3>
+				<h3 className="text-white text-3xl font-bold mb-4">The &quot;Never Give Up&quot; Attitude</h3>
 				<p className="text-secondary text-lg max-w-3xl mx-auto italic">
-					"Success is not final, failure is not fatal: it is the courage to continue that counts. 
-					My journey is defined by leadership, resilience, and an unwavering commitment to excellence."
+					&quot;Success is not final, failure is not fatal: it is the courage to continue that counts. 
+					My journey is defined by leadership, resilience, and an unwavering commitment to excellence.&quot;
 				</p>
 				<div className="mt-8 flex justify-center gap-4">
 					<div className="px-6 py-2 rounded-xl bg-[#915eff]/10 border border-[#915eff]/30 text-[#915eff] font-bold text-sm uppercase tracking-widest">Resilience: MAX</div>

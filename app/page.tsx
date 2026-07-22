@@ -10,10 +10,12 @@ import {
 	Achievements,
 	StarsCanvas,
 } from "./components";
+import ProfessionalEnhancements from "./components/ProfessionalEnhancements";
 
 export default function Home() {
 	return (
 		<div className="relative z-0 bg-primary font-sans mesh-background wavy-pattern min-h-screen">
+			<ProfessionalEnhancements />
 			<div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
 				<Navbar />
 				<Hero />

@@ -14,8 +14,37 @@ const Navbar = () => {
 		const handleScroll = () => {
 			setScrolled(window.scrollY > 50);
 		};
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
+
+		const sectionObserver = new IntersectionObserver(
+			(entries) => {
+				const visibleEntry = entries
+					.filter((entry) => entry.isIntersecting)
+					.sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+				if (!visibleEntry) return;
+
+				const id = visibleEntry.target.getAttribute("id");
+				if (!id || id === "hero") {
+					setActive("");
+					return;
+				}
+
+				const matchingLink = navLinks.find((link) => link.id === id);
+				setActive(matchingLink?.title ?? "");
+			},
+			{ threshold: [0.2, 0.4, 0.6], rootMargin: "-15% 0px -35% 0px" }
+		);
+
+		const targets = document.querySelectorAll("span.hash-span[id], section[id]");
+		targets.forEach((target) => sectionObserver.observe(target));
+
+		window.addEventListener("scroll", handleScroll, { passive: true });
+		handleScroll();
+
+		return () => {
+			sectionObserver.disconnect();
+			window.removeEventListener("scroll", handleScroll);
+		};
 	}, []);
 
 	return (
