@@ -53,11 +53,11 @@ const Navbar = () => {
 				scrolled ? "py-4" : "py-8"
 			}`}
 		>
-			<div className="max-w-7xl mx-auto px-6 flex justify-center">
+			<div className="w-[92vw] max-w-[1920px] mx-auto px-4 sm:px-6 flex justify-center">
 				<div className={`
-					flex items-center justify-between w-full px-8 py-3 rounded-full 
+					flex items-center justify-between w-full px-6 sm:px-8 py-3 rounded-full 
 					glass-navbar transition-all duration-500
-					${scrolled ? "max-w-[1000px] shadow-2xl" : "max-w-full"}
+					${scrolled ? "w-full max-w-[1200px] xl:max-w-[1500px] shadow-2xl" : "w-full"}
 				`}>
 					<Link
 						href="/"
@@ -97,7 +97,19 @@ const Navbar = () => {
 						))}
 					</ul>
 
-					<div className="hidden sm:block">
+					<div className="hidden sm:flex items-center gap-3">
+						<Link
+							href="/universe"
+							className="px-3.5 py-1.5 rounded-full text-xs font-bold text-[#4dd9ff] border border-[#4dd9ff]/30 bg-[#4dd9ff]/10 hover:bg-[#4dd9ff]/20 hover:scale-105 transition-all flex items-center gap-1.5 shadow-[0_0_15px_rgba(77,217,255,0.2)]"
+						>
+							<span>🌌</span> Galaxy Mode
+						</Link>
+						<Link
+							href="/space"
+							className="px-3.5 py-1.5 rounded-full text-xs font-bold text-[#c273ff] border border-[#c273ff]/30 bg-[#c273ff]/10 hover:bg-[#c273ff]/20 hover:scale-105 transition-all flex items-center gap-1.5 shadow-[0_0_15px_rgba(194,115,255,0.2)]"
+						>
+							<span>🎮</span> Game Mode
+						</Link>
 						<ResumeButton />
 					</div>
 
@@ -114,8 +126,8 @@ const Navbar = () => {
 				</div>
 
 				{/* Mobile Menu */}
-				<div className={`${!toggle ? "hidden" : "flex"} p-6 glass-morphism absolute top-24 right-6 min-w-[200px] z-10 rounded-3xl animate-in fade-in zoom-in duration-300`}>
-					<ul className="list-none flex flex-col gap-6 w-full">
+				<div className={`${!toggle ? "hidden" : "flex"} p-6 glass-morphism absolute top-24 right-6 min-w-[220px] z-10 rounded-3xl animate-in fade-in zoom-in duration-300`}>
+					<ul className="list-none flex flex-col gap-5 w-full">
 						{navLinks.map((nav) => (
 							<li
 								key={nav.id}
@@ -130,7 +142,23 @@ const Navbar = () => {
 								<Link href={`#${nav.id}`}>{nav.title}</Link>
 							</li>
 						))}
-						<div className="pt-4 border-t border-white/10">
+						<li className="pt-3 border-t border-white/10 flex flex-col gap-2">
+							<Link
+								href="/universe"
+								onClick={() => setToggle(false)}
+								className="px-3 py-2 rounded-xl text-xs font-bold text-[#4dd9ff] bg-[#4dd9ff]/10 border border-[#4dd9ff]/30 flex items-center gap-2"
+							>
+								<span>🌌</span> Galaxy Universe Mode
+							</Link>
+							<Link
+								href="/space"
+								onClick={() => setToggle(false)}
+								className="px-3 py-2 rounded-xl text-xs font-bold text-[#c273ff] bg-[#c273ff]/10 border border-[#c273ff]/30 flex items-center gap-2"
+							>
+								<span>🎮</span> 3D Space Game Mode
+							</Link>
+						</li>
+						<div className="pt-2 border-t border-white/10">
 							<ResumeButton />
 						</div>
 					</ul>

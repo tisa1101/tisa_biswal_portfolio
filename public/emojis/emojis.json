@@ -1,0 +1,202 @@
+[
+  {
+    "name": "happy",
+    "filename": "happy.png",
+    "path": "/emojis/happy.png",
+    "width": 119,
+    "height": 119,
+    "recommendedAnimation": "bounce & pulse"
+  },
+  {
+    "name": "laughing",
+    "filename": "laughing.png",
+    "path": "/emojis/laughing.png",
+    "width": 119,
+    "height": 119,
+    "recommendedAnimation": "shake & giggle"
+  },
+  {
+    "name": "smile",
+    "filename": "smile.png",
+    "path": "/emojis/smile.png",
+    "width": 119,
+    "height": 119,
+    "recommendedAnimation": "gentle scale"
+  },
+  {
+    "name": "heart-eyes",
+    "filename": "heart-eyes.png",
+    "path": "/emojis/heart-eyes.png",
+    "width": 119,
+    "height": 119,
+    "recommendedAnimation": "pulse hearts"
+  },
+  {
+    "name": "cool",
+    "filename": "cool.png",
+    "path": "/emojis/cool.png",
+    "width": 120,
+    "height": 120,
+    "recommendedAnimation": "slide down & tilt"
+  },
+  {
+    "name": "thinking",
+    "filename": "thinking.png",
+    "path": "/emojis/thinking.png",
+    "width": 105,
+    "height": 105,
+    "recommendedAnimation": "float & tilt"
+  },
+  {
+    "name": "surprised",
+    "filename": "surprised.png",
+    "path": "/emojis/surprised.png",
+    "width": 105,
+    "height": 105,
+    "recommendedAnimation": "pop & scale"
+  },
+  {
+    "name": "crying",
+    "filename": "crying.png",
+    "path": "/emojis/crying.png",
+    "width": 105,
+    "height": 105,
+    "recommendedAnimation": "tear drop pulse"
+  },
+  {
+    "name": "angry",
+    "filename": "angry.png",
+    "path": "/emojis/angry.png",
+    "width": 112,
+    "height": 112,
+    "recommendedAnimation": "shake & red glow"
+  },
+  {
+    "name": "party",
+    "filename": "party.png",
+    "path": "/emojis/party.png",
+    "width": 102,
+    "height": 102,
+    "recommendedAnimation": "confetti burst"
+  },
+  {
+    "name": "sleeping",
+    "filename": "sleeping.png",
+    "path": "/emojis/sleeping.png",
+    "width": 105,
+    "height": 105,
+    "recommendedAnimation": "zzz float"
+  },
+  {
+    "name": "excited",
+    "filename": "excited.png",
+    "path": "/emojis/excited.png",
+    "width": 105,
+    "height": 105,
+    "recommendedAnimation": "star pulse & clap"
+  },
+  {
+    "name": "coding",
+    "filename": "coding.png",
+    "path": "/emojis/coding.png",
+    "width": 114,
+    "height": 114,
+    "recommendedAnimation": "typing & terminal spark"
+  },
+  {
+    "name": "laptop",
+    "filename": "laptop.png",
+    "path": "/emojis/laptop.png",
+    "width": 106,
+    "height": 106,
+    "recommendedAnimation": "screen glow"
+  },
+  {
+    "name": "coffee",
+    "filename": "coffee.png",
+    "path": "/emojis/coffee.png",
+    "width": 105,
+    "height": 105,
+    "recommendedAnimation": "steam float"
+  },
+  {
+    "name": "graduation",
+    "filename": "graduation.png",
+    "path": "/emojis/graduation.png",
+    "width": 114,
+    "height": 114,
+    "recommendedAnimation": "cap toss & confetti"
+  },
+  {
+    "name": "rocket",
+    "filename": "rocket.png",
+    "path": "/emojis/rocket.png",
+    "width": 113,
+    "height": 113,
+    "recommendedAnimation": "launch trajectory"
+  },
+  {
+    "name": "thankyou",
+    "filename": "thankyou.png",
+    "path": "/emojis/thankyou.png",
+    "width": 106,
+    "height": 106,
+    "recommendedAnimation": "heart float"
+  },
+  {
+    "name": "thumbsup",
+    "filename": "thumbsup.png",
+    "path": "/emojis/thumbsup.png",
+    "width": 112,
+    "height": 112,
+    "recommendedAnimation": "pop & thumbs up"
+  },
+  {
+    "name": "clapping",
+    "filename": "clapping.png",
+    "path": "/emojis/clapping.png",
+    "width": 105,
+    "height": 105,
+    "recommendedAnimation": "hands clap pulse"
+  },
+  {
+    "name": "waving",
+    "filename": "waving.png",
+    "path": "/emojis/waving.png",
+    "width": 107,
+    "height": 107,
+    "recommendedAnimation": "hand wave loop"
+  },
+  {
+    "name": "namaste",
+    "filename": "namaste.png",
+    "path": "/emojis/namaste.png",
+    "width": 108,
+    "height": 108,
+    "recommendedAnimation": "gentle bow"
+  },
+  {
+    "name": "winner",
+    "filename": "winner.png",
+    "path": "/emojis/winner.png",
+    "width": 106,
+    "height": 106,
+    "recommendedAnimation": "trophy glow"
+  },
+  {
+    "name": "focus",
+    "filename": "focus.png",
+    "path": "/emojis/focus.png",
+    "width": 105,
+    "height": 105,
+    "recommendedAnimation": "bullseye pulse"
+  },
+  {
+    "name": "fire",
+    "filename": "fire.png",
+    "path": "/emojis/fire.png",
+    "width": 109,
+    "height": 109,
+    "recommendedAnimation": "flame flicker"
+  }
+]

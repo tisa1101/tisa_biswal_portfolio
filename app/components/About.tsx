@@ -7,6 +7,8 @@ import { Tilt } from "react-tilt";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "@/app/utils/motion";
 
+import AIAvatar from "./AIAvatar";
+
 type ServiceCardProps = {
 	index: number;
 	title: string;
@@ -70,25 +72,7 @@ const About = () => {
 					variants={fadeIn("left", "spring", 0.5, 1)}
 					className="flex-[0.4] w-full flex justify-center lg:justify-end"
 				>
-					<div className="relative group w-[280px] h-[400px] xs:w-[320px] xs:h-[450px]">
-						<div className="absolute -inset-1 bg-gradient-to-r from-[#915eff] to-[#00cea8] rounded-[32px] blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-						<div className="relative w-full h-full bg-tertiary rounded-[32px] overflow-hidden border border-white/10 shadow-2xl">
-							<Image
-								src="/personal/avatar.png"
-								fill
-								alt="Tisa Biswal Avatar"
-								className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
-							/>
-							<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-							<div className="absolute bottom-6 left-6 right-6">
-								<div className="flex flex-col gap-1">
-									<span className="text-white font-black text-xl uppercase tracking-tighter">Tisa Biswal</span>
-									<span className="text-[#00cea8] text-xs font-bold uppercase tracking-widest">Aspiring Software Engineer</span>
-									<div className="w-12 h-1 bg-[#915eff] rounded-full mt-2" />
-								</div>
-							</div>
-						</div>
-					</div>
+					<AIAvatar />
 				</motion.div>
 			</div>
 

@@ -1,0 +1,129 @@
+/* =====================================================
+   THE UNIVERSE OF TISA — Global Styles
+   ===================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --space-bg: #020818;
+  --space-deep: #040d2a;
+  --blue-core: #4488ff;
+  --blue-glow: rgba(68, 136, 255, 0.6);
+  --purple-core: #7b4fff;
+  --purple-glow: rgba(123, 79, 255, 0.5);
+  --cyan-glow: rgba(0, 220, 255, 0.4);
+  --text-primary: #e8f0ff;
+  --text-secondary: #8899cc;
+  --glass-bg: rgba(4, 16, 48, 0.65);
+  --glass-border: rgba(68, 136, 255, 0.18);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: var(--space-bg);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  -webkit-font-smoothing: antialiased;
+  cursor: none; /* replaced by custom cursor */
+}
+
+/* Custom cursor */
+.universe-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+}
+
+.universe-cursor-dot {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 0%, var(--blue-core) 50%, transparent 100%);
+  box-shadow: 0 0 12px var(--blue-glow), 0 0 24px var(--blue-glow);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.universe-cursor.hovering .universe-cursor-dot {
+  transform: scale(2.5);
+  background: radial-gradient(circle, #ffffff 0%, var(--purple-core) 50%, transparent 100%);
+  box-shadow: 0 0 20px var(--purple-glow), 0 0 40px var(--purple-glow);
+}
+
+/* Glass card */
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+}
+
+/* Text utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, var(--blue-core) 50%, var(--purple-core) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px var(--blue-glow), 0 0 40px var(--blue-glow);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--blue-core); border-radius: 4px; }
+
+/* Shooting star keyframe */
+@keyframes shootingStar {
+  0%   { transform: translateX(0) translateY(0) scaleX(1); opacity: 1; }
+  100% { transform: translateX(400px) translateY(200px) scaleX(6); opacity: 0; }
+}
+
+/* Subtle float */
+@keyframes planetFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+/* Orbit ring pulse */
+@keyframes orbitPulse {
+  0%, 100% { opacity: 0.25; transform: scale(1) rotateX(70deg); }
+  50%       { opacity: 0.55; transform: scale(1.06) rotateX(70deg); }
+}
+
+/* Glow pulse */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px var(--blue-glow); }
+  50%       { box-shadow: 0 0 50px var(--blue-glow), 0 0 80px var(--blue-glow); }
+}
+
+/* Twinkle */
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.8); }
+}
+
+/* Counter roll-up */
+@keyframes countUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* Modal backdrop blur-in */
+@keyframes backdropIn {
+  from { backdrop-filter: blur(0px); background: rgba(2, 8, 24, 0); }
+  to   { backdrop-filter: blur(16px); background: rgba(2, 8, 24, 0.88); }
+}
