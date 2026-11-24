@@ -10,7 +10,9 @@ import { Cpu, Code2, Wrench, Layers, Sparkles, CheckCircle2, Zap } from "lucide-
 
 // Technology Metadata & Experience Level
 const TECH_META: Record<string, { category: string; level: number; projects: string[]; color: string }> = {
-  Python: { category: "AI & ML", level: 95, projects: ["Dr. Glance AI", "Agentic Monitor", "MedBridge"], color: "#3776ab" },
+  Python: { category: "AI & ML", level: 95, projects: ["Dr. Glance AI", "MIRA Multimodal", "MedBridge"], color: "#3776ab" },
+  FastAPI: { category: "AI & ML", level: 92, projects: ["MIRA Voice Engine", "Stock Sense", "Dr. Glance API"], color: "#009688" },
+  Docker: { category: "Tools", level: 88, projects: ["Containerized Workflows", "MIRA Sandboxing"], color: "#2496ed" },
   "React JS": { category: "Full Stack", level: 92, projects: ["Portfolio", "NauvriQuest", "MedBridge"], color: "#61dafb" },
   "Next.JS": { category: "Full Stack", level: 94, projects: ["Tisa's Universe", "Agentic Monitor"], color: "#ffffff" },
   TensorFlow: { category: "AI & ML", level: 88, projects: ["Dr. Glance CNN", "Health Vision"], color: "#ff6f00" },

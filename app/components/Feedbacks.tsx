@@ -26,19 +26,47 @@ interface RecognitionItem {
 
 const RECOGNITION_ITEMS: RecognitionItem[] = [
   {
-    id: "sih-2025",
+    id: "build-fast-with-ai",
     isFeatured: true,
-    rankBadge: "★ FEATURED RECOGNITION · GRAND FINALE",
-    title: "Smart India Hackathon 2025",
+    rankBadge: "★ 1ST PLACE WINNER · HACKATHON CHAMPION",
+    title: "Build Fast with AI Hackathon",
+    subtitle: "Winner with Project MIRA (Real-Time Multimodal AI Agent)",
+    description:
+      "Secured 1st Place / Hackathon Winner for developing MIRA, an autonomous real-time multimodal AI agent featuring live audio streaming, camera & screen grounding, 128k ContextCore RAG, and sandboxed code execution.",
+    event: "Build Fast with AI",
+    year: "2026",
+    xp: "+3,000 XP",
+    tags: ["MULTIMODAL AI", "GEMINI 2.0 API", "WEBSOCKETS", "FASTAPI"],
+    link: "https://github.com/tisa1101",
+    icon: "/creator.webp",
+  },
+  {
+    id: "sih-grand-finale",
+    rankBadge: "🏅 NATIONAL GRAND FINALE",
+    title: "Smart India Hackathon (SIH 2025 & 2026)",
     subtitle: "Grand Finale Nominee (Ministry of Education)",
     description:
-      "Nominated to the Grand Finale of SIH 2025 for developing T-Rex, an AI-powered sports performance tracking platform using real-time Computer Vision and biomechanics analysis.",
-    event: "Smart India Hackathon 2025",
-    year: "2025",
+      "Nominated to the Grand Finale of SIH 2025 & SIH 2026 for developing T-Rex, an AI-powered sports performance tracking platform using real-time Computer Vision and biomechanics analysis.",
+    event: "Smart India Hackathon (Govt. of India)",
+    year: "2025 - 2026",
     xp: "+1,200 XP",
-    tags: ["AI / COMPUTER VISION", "TEAM ACHIEVEMENT", "SPORTS BIOMECHANICS"],
+    tags: ["AI / COMPUTER VISION", "SPORTS BIOMECHANICS", "NATIONAL FINALIST"],
     link: "https://github.com/tisa1101",
     icon: "/tech/github.webp",
+  },
+  {
+    id: "hcltech-amplified",
+    rankBadge: "🏆 16TH RANK NATIONWIDE",
+    title: "HCLTech AMPlified 2026",
+    subtitle: "Top 25 National Finalist (Rank 16)",
+    description:
+      "Competed against thousands of student developers nationwide, reaching the Top 25 Finalists and securing Rank 16 in the national engineering challenge.",
+    event: "HCLTech AMPlified",
+    year: "2026",
+    xp: "+1,500 XP",
+    tags: ["SYSTEMS", "COMPETITIVE ENGINEERING", "TOP 25 NATIONAL"],
+    link: "https://github.com/tisa1101",
+    icon: "/tech/nextjs.svg",
   },
   {
     id: "hack-ai-season-2",
@@ -52,11 +80,11 @@ const RECOGNITION_ITEMS: RecognitionItem[] = [
     xp: "+800 XP",
     tags: ["AI • INNOVATION", "APPLIAI", "CAREER ENGINE"],
     link: "https://github.com/tisa1101",
-    icon: "/creator.webp",
+    icon: "/tech/reactjs.webp",
   },
   {
     id: "anveshan-2025",
-    rankBadge: "🏆 PROTOTYPE MARATHON",
+    rankBadge: "🔬 PROTOTYPE MARATHON",
     title: "Anveshan 2025–26",
     subtitle: "AIU Student Research Convention",
     description:
@@ -258,18 +286,20 @@ const Feedbacks = () => {
           {[
             { year: "2025", title: "Smart India Hackathon", detail: "Grand Finale Nominee (T-Rex)" },
             { year: "2025", title: "AIU Anveshan Marathon", detail: "Health Sciences Selection" },
+            { year: "2026", title: "Build Fast with AI", detail: "1st Place Winner (MIRA)" },
+            { year: "2026", title: "HCLTech AMPlified", detail: "Top 25 Finalist (Rank 16)" },
             { year: "2026", title: "Hack AI Season 2", detail: "3rd Place Winner (NauvriQuest)" },
           ].map((item) => (
             <motion.div
               key={item.title}
               whileHover={{ scale: 1.05 }}
-              className="relative z-10 flex flex-col items-center text-center p-3.5 rounded-2xl bg-[#0c0c1d] border border-white/15 backdrop-blur-xl w-full md:w-56 shadow-xl cursor-pointer"
+              className="relative z-10 flex flex-col items-center text-center p-3 rounded-2xl bg-[#0c0c1d] border border-white/15 backdrop-blur-xl w-full md:w-44 shadow-xl cursor-pointer"
             >
-              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-[#00cea8]/20 text-[#00cea8] border border-[#00cea8]/40 mb-1">
+              <span className="px-2 py-0.5 rounded-full text-[9px] font-mono font-bold bg-[#00cea8]/20 text-[#00cea8] border border-[#00cea8]/40 mb-1">
                 {item.year}
               </span>
               <span className="text-white text-xs font-bold font-sans">{item.title}</span>
-              <span className="text-[10px] text-secondary font-mono mt-1">{item.detail}</span>
+              <span className="text-[9px] text-secondary font-mono mt-0.5">{item.detail}</span>
             </motion.div>
           ))}
         </div>
@@ -278,10 +308,10 @@ const Feedbacks = () => {
       {/* ── 4. Compact Achievement Stats Strip ── */}
       <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
         {[
-          { num: "03", label: "Major Recognitions", color: "#00cea8" },
-          { num: "02", label: "Hackathon Victories", color: "#915eff" },
-          { num: "01", label: "Grand Finale Nominee", color: "#ffa116" },
-          { num: "03+", label: "MedTech Projects", color: "#ff3333" },
+          { num: "05", label: "Major Recognitions", color: "#00cea8" },
+          { num: "03", label: "Hackathons Won", color: "#915eff" },
+          { num: "02", label: "Patents Pending", color: "#ffa116" },
+          { num: "20+", label: "Projects Completed", color: "#ff3333" },
         ].map((stat) => (
           <div
             key={stat.label}
@@ -324,7 +354,7 @@ const Feedbacks = () => {
             <span>LinkedIn Profile</span>
           </Link>
           <Link
-            href="mailto:tisabiswal1101@gmail.com"
+            href="mailto:tisabiswal29@gmail.com"
             className="px-6 py-3.5 rounded-2xl bg-black/60 border border-white/15 hover:border-[#00cea8] text-white hover:text-[#00cea8] font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2.5 shadow-xl hover:scale-105"
           >
             <Mail className="w-4 h-4 text-[#00cea8]" />

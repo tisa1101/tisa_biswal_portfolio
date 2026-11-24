@@ -25,14 +25,16 @@ export function ContactContent() {
         animate={{ opacity: 1, y: 0 }}
       >
         {[
-          { label: "GitHub", icon: "🐙", href: "#", color: "#f5a623" },
-          { label: "LinkedIn", icon: "💼", href: "#", color: "#0088ff" },
-          { label: "Email", icon: "📧", href: "mailto:tisa@example.com", color: "#00bb88" },
-          { label: "Resume", icon: "📄", href: "#", color: "#aa44ff" },
+          { label: "GitHub", icon: "🐙", href: "https://github.com/tisa1101", color: "#f5a623" },
+          { label: "LinkedIn", icon: "💼", href: "https://linkedin.com/in/tisa-biswal/", color: "#0088ff" },
+          { label: "Email", icon: "📧", href: "mailto:tisabiswal29@gmail.com", color: "#00bb88" },
+          { label: "Resume", icon: "📄", href: "/resume/Resume.pdf", color: "#aa44ff" },
         ].map((link) => (
           <a
             key={link.label}
             href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex flex-col items-center gap-2 p-4 rounded-xl text-center transition-all"
             style={{
               background: `${link.color}11`,

@@ -59,7 +59,7 @@ export default function CommandPalette() {
 			icon: <FileText className="w-4 h-4 text-[#915eff]" />,
 			label: "Download Professional Resume",
 			action: () => {
-				window.open("https://drive.google.com/file/d/1tG1put6T3wXMpmUyqnRYkF6IDUsALr61/view?usp=sharing", "_blank");
+				window.open("/resume/Resume.pdf", "_blank");
 				setIsOpen(false);
 			},
 			category: "Quick Actions",

@@ -13,11 +13,25 @@ const stats = [
 
 const hackathons = [
   {
-    name: "Smart India Hackathon 2025",
+    name: "Build Fast with AI Hackathon",
+    result: "Winner 🥇",
+    badge: "🏆",
+    desc: "1st Place winner for developing MIRA, an autonomous real-time multimodal AI agent with live audio streaming and screen grounding.",
+    color: "#00cea8",
+  },
+  {
+    name: "Smart India Hackathon (2025 & 2026)",
     result: "Grand Finale",
     badge: "🏅",
     desc: "Nominated to the Grand Finale for T-Rex, an AI-powered sports performance tracking platform.",
     color: "#915eff",
+  },
+  {
+    name: "HCLTech AMPlified 2026",
+    result: "Rank 16 Nationwide",
+    badge: "⭐",
+    desc: "Top 25 National Finalist ranking 16th nationwide for advanced software engineering.",
+    color: "#ff6b6b",
   },
   {
     name: "Hack AI Season 2 — LPU",
@@ -25,6 +39,13 @@ const hackathons = [
     badge: "🏆",
     desc: "Won 3rd place in a 24-hour hackathon for NauvriQuest, an AI-powered career platform with AppliAI.",
     color: "#ffe040",
+  },
+  {
+    name: "Odoo Hackathon 2026",
+    result: "Grand Finale",
+    badge: "🚀",
+    desc: "Selected for Grand Finale building enterprise-grade intelligent ERP modules.",
+    color: "#915eff",
   },
   {
     name: "Anveshan 2025-26",

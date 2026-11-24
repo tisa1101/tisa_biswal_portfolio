@@ -60,11 +60,10 @@ const About = () => {
 						variants={fadeIn("", "", 0.1, 1)}
 						className="mt-4 text-secondary text-[17px] leading-[30px]"
 					>
-						I am a forward-thinking Software Engineer and AI Researcher with a deep-rooted passion for healthcare innovation. 
-						My expertise lies at the intersection of Artificial Intelligence and MedTech, where I develop cutting-edge solutions like 
-						smart diagnostic systems and agentic monitoring platforms. With multiple patents pending and a track record of success in 
-						national hackathons (SIH, Hack AI), I specialize in building impactful, scalable, and recruiter-friendly applications 
-						using Python, React, Next.js, and advanced ML frameworks. My mission is to bridge the gap between technology and human well-being through intelligent, data-driven solutions.
+						I am a forward-thinking Software Engineer and AI Researcher with a deep-rooted passion for healthcare innovation and intelligent systems. 
+						My expertise spans Artificial Intelligence, full-stack systems engineering, and MedTech. As the Winner of the Build Fast with AI Hackathon (Project MIRA), 
+						holder of patent applications in clinical AI, and finalist in prestigious national challenges (SIH Grand Finale, HCLTech AMPlified 16th Rank, Odoo Grand Finale), 
+						I specialize in building high-performance, scalable platforms using Python, FastAPI, C# / .NET 8, React, Next.js, and cutting-edge LLM/RAG pipelines.
 					</motion.p>
 				</div>
 

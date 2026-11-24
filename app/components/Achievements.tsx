@@ -11,6 +11,42 @@ import { Trophy, Award, Sparkles, Star, Zap, ShieldCheck, ChevronRight, X, Flame
 
 // Categorized Achievement Metadata with Rarity, Skills & Timeline Year
 const ACHIEVEMENT_META: Record<string, { rarity: "MYTHIC" | "LEGENDARY" | "EPIC" | "RARE"; category: string; year: string; skills: string[]; xp: number; role: string; org: string }> = {
+  "Build Fast with AI Winner": {
+    rarity: "MYTHIC",
+    category: "HACKATHONS",
+    year: "2026",
+    skills: ["Multimodal AI", "Gemini 2.0 API", "FastAPI", "Live WebSockets", "RAG"],
+    xp: 3000,
+    role: "Hackathon Champion",
+    org: "Build Fast with AI",
+  },
+  "HCLTech AMPlified Finalist": {
+    rarity: "LEGENDARY",
+    category: "HACKATHONS",
+    year: "2026",
+    skills: ["Full Stack Architecture", "Scalability", "Competitive Engineering"],
+    xp: 1500,
+    role: "Rank 16 Nationwide",
+    org: "HCLTech AMPlified 2026",
+  },
+  "Odoo Hackathon Grand Finale": {
+    rarity: "LEGENDARY",
+    category: "HACKATHONS",
+    year: "2026",
+    skills: ["Enterprise Systems", "Business Logic", "Full Stack Development"],
+    xp: 1200,
+    role: "National Grand Finalist",
+    org: "Odoo India",
+  },
+  "Smart India Hackathon Finalist": {
+    rarity: "LEGENDARY",
+    category: "HACKATHONS",
+    year: "2025-2026",
+    skills: ["Computer Vision", "Sports Biomechanics", "IoT Hardware Sync"],
+    xp: 1200,
+    role: "Grand Finale Nominee",
+    org: "Ministry of Education (Govt. of India)",
+  },
   "Academic Titan": {
     rarity: "MYTHIC",
     category: "CERTIFICATIONS",
@@ -236,7 +272,7 @@ const Achievements = () => {
             { year: "2023", title: "Academic & Speech Titan", desc: "CISCE District Topper & State Debate 2nd Merit", xp: "+3,500 XP" },
             { year: "2024", title: "Event Architect", desc: "Avishkar 2.0 Lead & Commencement Chair", xp: "+1,450 XP" },
             { year: "2025", title: "Community & MedTech Lead", desc: "Women Who Code Lead & SIH Grand Finale", xp: "+2,200 XP" },
-            { year: "2026", title: "Patent & Hack AI Master", desc: "2 Patents Pending & Hack AI 3rd Winner", xp: "+5,300 XP" },
+            { year: "2026", title: "Build Fast with AI Winner & Patents", desc: "Winner Build Fast with AI (MIRA), HCLTech 16th Rank, Odoo Grand Finale, 2 Patents Pending", xp: "+8,500 XP" },
           ].map((milestone) => (
             <motion.div
               key={milestone.year}

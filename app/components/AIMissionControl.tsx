@@ -209,8 +209,8 @@ export default function AIMissionControl() {
             🏢
           </div>
           <div className="flex flex-col">
-            <span className="text-xs font-black text-white tracking-wide font-sans">LPU CSE ALUMNI</span>
-            <span className="text-[10px] text-[#00cea8] font-bold font-mono tracking-wider">CGPA: 8.45 • B.Tech CSE</span>
+            <span className="text-xs font-black text-white tracking-wide font-sans">LPU CSE SCHOLAR</span>
+            <span className="text-[10px] text-[#00cea8] font-bold font-mono tracking-wider">CGPA: 8.96 • B.Tech CSE</span>
           </div>
         </motion.div>
       </div>

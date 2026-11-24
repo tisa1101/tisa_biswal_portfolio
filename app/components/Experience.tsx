@@ -6,17 +6,18 @@ import Image from "next/image";
 import { SectionWrapper } from "@/app/components/HigherOrderComponents";
 import { experiences } from "@/app/constants";
 import { textVariant, fadeIn } from "@/app/utils/motion";
-import { Award, Briefcase, Calendar, Sparkles, ChevronRight, CheckCircle2, ShieldCheck, Zap, Shield, Trophy, Flame } from "lucide-react";
+import { Award, Briefcase, Calendar, Sparkles, ChevronRight, CheckCircle2, ShieldCheck, Zap, Shield, Trophy, Flame, Building2 } from "lucide-react";
 
 // Categorized Tags & Icons for Experience Items
 const EXPERIENCE_TAGS: Record<number, string[]> = {
-  0: ["Python", "CNNs", "Computer Vision", "MediaPipe", "OpenCV", "Patent Pending"],
-  1: ["AI Agents", "Next.js", "Zustand", "System Telemetry", "Vercel"],
-  2: ["Healthcare AI", "Patient Integration", "Full Stack", "Patent Pending"],
-  3: ["24h Hackathon", "3rd Place Winner", "AppliAI", "React", "AI Chatbot"],
+  0: ["ASP.NET Core", "C# / .NET 8", "RAG Pipelines", "React & TypeScript", "SQL Server", "Docker"],
+  1: ["Python", "CNNs", "Computer Vision", "MediaPipe", "OpenCV", "Patent Pending"],
+  2: ["AI Agents", "Next.js", "Zustand", "System Telemetry", "Vercel"],
+  3: ["Healthcare AI", "Patient Integration", "Full Stack", "Patent Pending"],
+  4: ["24h Hackathon", "3rd Place Winner", "AppliAI", "React", "AI Chatbot"],
 };
 
-const CATEGORIES = ["All", "AI & MedTech", "Agentic AI", "Hackathons & Honors"];
+const CATEGORIES = ["All", "Corporate & Systems", "AI & MedTech", "Agentic AI", "Hackathons & Honors"];
 
 export function ExperienceSection() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -24,9 +25,10 @@ export function ExperienceSection() {
 
   const filteredExperiences = experiences.filter((exp, idx) => {
     if (activeCategory === "All") return true;
-    if (activeCategory === "AI & MedTech") return idx === 0 || idx === 2;
-    if (activeCategory === "Agentic AI") return idx === 1;
-    if (activeCategory === "Hackathons & Honors") return idx === 3;
+    if (activeCategory === "Corporate & Systems") return idx === 0;
+    if (activeCategory === "AI & MedTech") return idx === 1 || idx === 3;
+    if (activeCategory === "Agentic AI") return idx === 2;
+    if (activeCategory === "Hackathons & Honors") return idx === 4;
     return true;
   });
 
@@ -62,6 +64,7 @@ export function ExperienceSection() {
               }`}
             >
               {category === "All" && <Briefcase className="w-3.5 h-3.5" />}
+              {category === "Corporate & Systems" && <Building2 className="w-3.5 h-3.5 text-[#00aaff]" />}
               {category === "AI & MedTech" && <Shield className="w-3.5 h-3.5 text-[#00cea8]" />}
               {category === "Agentic AI" && <Zap className="w-3.5 h-3.5 text-[#915eff]" />}
               {category === "Hackathons & Honors" && <Trophy className="w-3.5 h-3.5 text-yellow-400" />}

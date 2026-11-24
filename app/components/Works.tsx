@@ -12,9 +12,21 @@ import { Sparkles, Code2, ExternalLink, ShieldCheck, Trophy, Layers, X, ArrowUpR
 
 // Categorized Metadata & Highlights
 const PROJECT_METADATA: Record<string, { badge: string; impact: string; category: string; color: string }> = {
+  "MIRA Multimodal AI": {
+    badge: "Winner · Build Fast with AI Hackathon",
+    impact: "Real-time multimodal voice streaming agent with 128k ContextCore RAG & screen grounding.",
+    category: "Hackathon Winners",
+    color: "#00cea8",
+  },
+  "Stock Sense": {
+    badge: "AI Inventory & .NET 8 Ledger",
+    impact: "Scalable supply chain engine with FastAPI predictive microservice & Gemini copilot.",
+    category: "Corporate & Enterprise",
+    color: "#00aaff",
+  },
   "Dr. Glance AI": {
     badge: "Patent Pending · AIU Anveshan 2025",
-    impact: "Early detection of oral & eye pathologies using CNNs and MediaPipe.",
+    impact: "Early detection of oral & eye pathologies using MobileNetV2 and MediaPipe.",
     category: "AI & MedTech",
     color: "#00cea8",
   },
@@ -37,14 +49,14 @@ const PROJECT_METADATA: Record<string, { badge: string; impact: string; category
     color: "#ffa116",
   },
   "T-Rex Sports AI": {
-    badge: "SIH 2025 Grand Finale Nominee",
+    badge: "SIH Grand Finale Nominee (2025 & 2026)",
     impact: "Computer Vision platform tracking real-time athletic biomechanics.",
     category: "Hackathon Winners",
     color: "#ff3333",
   },
 };
 
-const CATEGORIES = ["All Innovations", "AI & MedTech", "Agentic AI & Web", "Hackathon Winners"];
+const CATEGORIES = ["All Innovations", "Hackathon Winners", "AI & MedTech", "Agentic AI & Web", "Corporate & Enterprise"];
 
 const Works = () => {
   const [activeCategory, setActiveCategory] = useState("All Innovations");
@@ -88,9 +100,10 @@ const Works = () => {
               }`}
             >
               {category === "All Innovations" && <Layers className="w-3.5 h-3.5" />}
+              {category === "Hackathon Winners" && <Trophy className="w-3.5 h-3.5 text-yellow-400" />}
               {category === "AI & MedTech" && <ShieldCheck className="w-3.5 h-3.5 text-[#00cea8]" />}
               {category === "Agentic AI & Web" && <Cpu className="w-3.5 h-3.5 text-[#915eff]" />}
-              {category === "Hackathon Winners" && <Trophy className="w-3.5 h-3.5 text-yellow-400" />}
+              {category === "Corporate & Enterprise" && <Sparkles className="w-3.5 h-3.5 text-[#00aaff]" />}
               <span>{category}</span>
             </motion.button>
           );

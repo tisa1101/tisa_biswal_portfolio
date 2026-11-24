@@ -91,14 +91,16 @@ export function MissionComplete() {
             transition={{ delay: 2.4 }}
           >
             {[
-              { label: "📄 Download Resume", href: "#", primary: true },
-              { label: "💼 Hire Me", href: "mailto:tisa@example.com", primary: true },
-              { label: "🐙 GitHub", href: "#", primary: false },
-              { label: "💬 LinkedIn", href: "#", primary: false },
+              { label: "📄 Download Resume", href: "/resume/Resume.pdf", primary: true, target: "_blank" },
+              { label: "💼 Hire Me", href: "mailto:tisabiswal29@gmail.com", primary: true },
+              { label: "🐙 GitHub", href: "https://github.com/tisa1101", primary: false, target: "_blank" },
+              { label: "💬 LinkedIn", href: "https://linkedin.com/in/tisa-biswal/", primary: false, target: "_blank" },
             ].map((btn) => (
               <a
                 key={btn.label}
                 href={btn.href}
+                target={btn.target}
+                rel="noopener noreferrer"
                 className="px-6 py-3 rounded-full text-sm font-mono tracking-wider transition-all"
                 style={
                   btn.primary
